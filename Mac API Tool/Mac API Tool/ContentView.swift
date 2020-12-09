@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var url: String = ""
+    @State var request_type: RequestType = RequestType.get
+
     
     var body: some View {
         Text("Mac API Tool")
@@ -31,6 +33,19 @@ struct ContentView: View {
             TextField("Enter URL...", text: $url)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         }.padding(.leading).padding(.trailing)
+        
+        VStack(alignment: .leading) {
+            Text("Request Type")
+                .font(.callout)
+                .bold()
+            Picker("Request Type", selection: $request_type) {
+                ForEach(RequestType.allCases, id: \.self) { this_type in
+                    Text(this_type.rawValue).tag(this_type)
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .labelsHidden()
+        }.padding()
     }
 }
 
