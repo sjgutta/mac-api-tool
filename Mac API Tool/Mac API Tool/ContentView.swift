@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var url: String = ""
     @State var request_type: RequestType = RequestType.get
+    @State var param_string: String = ""
     @State var auth_param_name: String = ""
     @State var auth_param_value: String = ""
     
@@ -57,6 +58,13 @@ struct ContentView: View {
                     .frame(width: 200)
                 TextField("Value", text: $auth_param_value)
             }
+        }.padding(.leading).padding(.trailing).padding(.bottom)
+        
+        VStack(alignment: .leading) {
+            Text("Query Params/Body (Enter as 'Key = Value' per line)")
+                .font(.callout)
+                .bold()
+            TextEditor(text: $param_string)
         }.padding(.leading).padding(.trailing).padding(.bottom)
     }
 }
