@@ -16,6 +16,7 @@
 		643162312581598D0038BEBE /* Mac_API_ToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643162302581598D0038BEBE /* Mac_API_ToolUITests.swift */; };
 		6431624225816D6F0038BEBE /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6431624125816D6F0038BEBE /* RequestType.swift */; };
 		6431624725816D860038BEBE /* CustomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6431624625816D860038BEBE /* CustomResponse.swift */; };
+		643162552581891B0038BEBE /* RequestFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643162542581891B0038BEBE /* RequestFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		643162322581598D0038BEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6431624125816D6F0038BEBE /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		6431624625816D860038BEBE /* CustomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomResponse.swift; sourceTree = "<group>"; };
+		643162542581891B0038BEBE /* RequestFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				6431621B2581598D0038BEBE /* Info.plist */,
 				6431621C2581598D0038BEBE /* Mac_API_Tool.entitlements */,
 				643162152581598D0038BEBE /* Preview Content */,
+				643162542581891B0038BEBE /* RequestFunctions.swift */,
 			);
 			path = "Mac API Tool";
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643162552581891B0038BEBE /* RequestFunctions.swift in Sources */,
 				64316212258159870038BEBE /* ContentView.swift in Sources */,
 				64316210258159870038BEBE /* AppDelegate.swift in Sources */,
 				6431624225816D6F0038BEBE /* RequestType.swift in Sources */,
