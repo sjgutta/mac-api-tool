@@ -8,9 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var url: String = ""
+    
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        Text("Mac API Tool")
+            .font(.title)
+            .multilineTextAlignment(.center)
+            .padding(.top)
+        
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Base URL")
+                    .font(.callout)
+                    .bold()
+                Spacer()
+                Button(action: {
+                    exit(-1)
+                }) {
+                    Text("Quit App")
+                }
+            }
+            TextField("Enter URL...", text: $url)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+        }.padding(.leading).padding(.trailing)
     }
 }
 
