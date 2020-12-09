@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var url: String = ""
     @State var request_type: RequestType = RequestType.get
-
+    @State var auth_param_name: String = ""
+    @State var auth_param_value: String = ""
     
     var body: some View {
         Text("Mac API Tool")
@@ -46,6 +47,17 @@ struct ContentView: View {
             .pickerStyle(SegmentedPickerStyle())
             .labelsHidden()
         }.padding()
+        
+        VStack(alignment: .leading) {
+            Text("Auth Param (Name and Value)")
+                .font(.callout)
+                .bold()
+            HStack {
+                TextField("Name", text: $auth_param_name)
+                    .frame(width: 200)
+                TextField("Value", text: $auth_param_value)
+            }
+        }.padding(.leading).padding(.trailing).padding(.bottom)
     }
 }
 
