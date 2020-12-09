@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "api-5.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
@@ -11,6 +12,7 @@
       "size" : "16x16"
     },
     {
+      "filename" : "api-4.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
@@ -21,6 +23,7 @@
       "size" : "32x32"
     },
     {
+      "filename" : "api-3.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
@@ -31,6 +34,7 @@
       "size" : "128x128"
     },
     {
+      "filename" : "api-2.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
@@ -41,6 +45,7 @@
       "size" : "256x256"
     },
     {
+      "filename" : "api.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
