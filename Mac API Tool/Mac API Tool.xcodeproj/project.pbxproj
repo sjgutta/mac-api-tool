@@ -14,6 +14,8 @@
 		6431621A2581598D0038BEBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643162182581598D0038BEBE /* Main.storyboard */; };
 		643162262581598D0038BEBE /* Mac_API_ToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643162252581598D0038BEBE /* Mac_API_ToolTests.swift */; };
 		643162312581598D0038BEBE /* Mac_API_ToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643162302581598D0038BEBE /* Mac_API_ToolUITests.swift */; };
+		6431624225816D6F0038BEBE /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6431624125816D6F0038BEBE /* RequestType.swift */; };
+		6431624725816D860038BEBE /* CustomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6431624625816D860038BEBE /* CustomResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		6431622C2581598D0038BEBE /* Mac API ToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac API ToolUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		643162302581598D0038BEBE /* Mac_API_ToolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_API_ToolUITests.swift; sourceTree = "<group>"; };
 		643162322581598D0038BEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6431624125816D6F0038BEBE /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		6431624625816D860038BEBE /* CustomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				6431620F258159870038BEBE /* AppDelegate.swift */,
+				6431624125816D6F0038BEBE /* RequestType.swift */,
+				6431624625816D860038BEBE /* CustomResponse.swift */,
 				64316211258159870038BEBE /* ContentView.swift */,
 				643162132581598D0038BEBE /* Assets.xcassets */,
 				643162182581598D0038BEBE /* Main.storyboard */,
@@ -267,6 +273,8 @@
 			files = (
 				64316212258159870038BEBE /* ContentView.swift in Sources */,
 				64316210258159870038BEBE /* AppDelegate.swift in Sources */,
+				6431624225816D6F0038BEBE /* RequestType.swift in Sources */,
+				6431624725816D860038BEBE /* CustomResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
