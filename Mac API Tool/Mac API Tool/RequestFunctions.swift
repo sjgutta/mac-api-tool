@@ -39,3 +39,55 @@ extension Data {
         return prettyPrintedString
     }
 }
+
+func doRequest(url: String, auth_params: Dictionary<String, String>, params: Dictionary<String, String>, type: RequestType, completionBlock: @escaping (CustomResponse) -> CustomResponse) -> URLSessionTask {
+    let urlComp = NSURLComponents(string: url)!
+        
+    var items = [URLQueryItem]()
+        
+    for (key,value) in auth_params {
+        items.append(URLQueryItem(name: key, value: value))
+    }
+    
+    if type == RequestType.get {
+        for (key,value) in params {
+            items.append(URLQueryItem(name: key, value: value))
+        }
+    }
+
+    items = items.filter{!$0.name.isEmpty}
+
+    if !items.isEmpty {
+      urlComp.queryItems = items
+    }
+
+    var request = URLRequest(url: urlComp.url!)
+    request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+    request.httpMethod = type.rawValue
+    
+    if type != RequestType.get {
+        request.httpBody = params.percentEncoded()
+    }
+    
+    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        guard let data = data,
+            let response = response as? HTTPURLResponse,
+            error == nil else {
+            // check for fundamental networking error
+            let result = CustomResponse(status: "ERROR", data: "An error occurred")
+            completionBlock(result)
+            return
+        }
+        
+        guard (200 ... 299) ~= response.statusCode else {                    // check for http errors
+            let result = CustomResponse(status: response.statusCode, data: String(data: data, encoding: .utf8)! as NSString)
+            completionBlock(result)
+            return
+        }
+                
+        let result = CustomResponse(status: response.statusCode, data: data.prettyPrintedJSONString!, error: false)
+        completionBlock(result)
+    }
+    task.resume()
+    return task
+}
