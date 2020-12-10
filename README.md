@@ -8,7 +8,9 @@ The Mac API Tool is a lightweight menu bar application designed to improve the w
 This application has been intended for use on Mac’s running OS 11.0 and higher. It was built in Xcode 12.2.
 
 ## Installation Instructions
-1. Instructions here
+1. Download the latest release from [here](https://github.com/sjgutta/mac-api-tool/releases/latest/download/Mac-api-tool.app.zip).
+2. Drag the downloaded application from your Downloads folder into your Applications folder.
+3. You are now ready to start the application and use it!
 
 ## Uninstalling The Application (VERY IMPORTANT)
 If the application is running, you may experience an error when uninstalling but this is easily fixed with the following steps.
