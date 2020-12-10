@@ -84,6 +84,22 @@ struct ContentView: View {
             .padding()
         }
     }
+    
+    func get_params_dict(param_string: String) -> Dictionary<String, String> {
+        var split_by_lines = param_string.split(whereSeparator: \.isNewline)
+        var result = Dictionary<String, String>()
+        for line in split_by_lines {
+            var key_value_split = line.components(separatedBy: "=")
+            if key_value_split.count > 1 {
+                var key = key_value_split[0].trimmingCharacters(in: .whitespacesAndNewlines)
+                var value = key_value_split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+                if key != "" && value != ""{
+                    result[key] = value
+                }
+            }
+        }
+        return result
+    }
 }
 
 
