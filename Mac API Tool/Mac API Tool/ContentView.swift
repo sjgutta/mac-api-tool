@@ -71,6 +71,38 @@ struct ContentView: View {
                         .bold()
                     TextEditor(text: $param_string)
                 }.padding(.leading).padding(.trailing).padding(.bottom)
+                
+                VStack {
+                    HStack{
+                        Button(action: {
+                            clearState()
+                        }) {
+                            HStack {
+                                Text("Clear All")
+                                Image(systemName: "clear.fill")
+                            }.padding(10.0).foregroundColor(.red)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10.0)
+                                    .stroke(Color.red, lineWidth: 2.0)
+                            )
+                        }
+                        .buttonStyle(PlainButtonStyle()).padding(.trailing)
+
+                        Button(action: {
+                            makeRequest()
+                        }) {
+                            HStack {
+                                Text("Send Request")
+                                Image(systemName: "paperplane.fill")
+                            }.padding(10.0).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10.0)
+                                    .stroke(Color.blue, lineWidth: 2.0)
+                            )
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }.padding(.bottom)
+                }
             }
             
             Divider()
