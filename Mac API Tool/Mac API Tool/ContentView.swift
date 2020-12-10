@@ -14,6 +14,8 @@ struct ContentView: View {
     @State var param_string: String = ""
     @State var auth_param_name: String = ""
     @State var auth_param_value: String = ""
+    @State var status_code: String = "N/A"
+    @State var error_occurred: Bool = false
     
     var body: some View {
         VSplitView {
@@ -82,6 +84,25 @@ struct ContentView: View {
             }
             .frame(minHeight: 200, alignment: .top)
             .padding()
+        }
+    }
+    
+    func makeRequest() {
+        if url == ""{
+            self.error_occurred = true
+            self.status_code = "MUST HAVE URL"
+            return
+        }
+        var params = get_params_dict(param_string: self.param_string)
+        var auth_params = Dictionary<String, String>()
+        if self.auth_param_name != "" && self.auth_param_value != "" {
+            auth_params[auth_param_name] = auth_param_value
+        }
+        doRequest(url: self.url, auth_params: auth_params, params: params, type: self.request_type) { output in
+            self.response = String(output.json_data)
+            self.status_code = output.statusCode
+            self.error_occurred = output.isError
+            return output
         }
     }
     
