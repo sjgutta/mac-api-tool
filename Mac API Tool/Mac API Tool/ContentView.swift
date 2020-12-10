@@ -79,6 +79,16 @@ struct ContentView: View {
                 HStack {
                     Text("Response (Drag Divider to Expand)")
                         .bold()
+                    Spacer()
+                    if self.error_occurred {
+                        Text("Status Code: " + status_code)
+                            .bold()
+                            .foregroundColor(.red)
+                    } else {
+                        Text("Status Code: " + status_code)
+                            .bold()
+                    }
+                    
                 }
                 TextEditor(text: $response)
             }
