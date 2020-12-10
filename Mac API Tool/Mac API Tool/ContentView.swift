@@ -87,6 +87,17 @@ struct ContentView: View {
         }
     }
     
+    func clearState() {
+        self.url = ""
+        self.request_type = RequestType.get
+        self.response = ""
+        self.auth_param_name = ""
+        self.auth_param_value = ""
+        self.param_string = ""
+        self.status_code = "N/A"
+        self.error_occurred = false
+    }
+    
     func makeRequest() {
         if url == ""{
             self.error_occurred = true
