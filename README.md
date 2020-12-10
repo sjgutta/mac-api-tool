@@ -17,7 +17,7 @@ If the application is running, you may experience an error when uninstalling but
 1. Open the application using its menu bar icon.
 2. Press the “Quit App” button to terminate all processes relate to the application.
 3. Now, you should be able to remove the application from your Applications folder for uninstalling. The icon will no longer show up on the menu bar.
-4. If all else fails, you are also able to kill any relate processes from the “Activity Monitor.”
+4. If all else fails, you are also able to kill any related processes from the “Activity Monitor.”
 
 ## Features
 1. QUIT APP BUTTON: This is a very important feature. Users can click this button to quit the app process and remove it from the toolbar. However, the only true use case is when uninstalling the app. Users must press this first to stop the app process, so that it may be moved from the Applications folder to Trash.
@@ -25,9 +25,9 @@ If the application is running, you may experience an error when uninstalling but
 3. Users can make GET, POST, PUT, and DELETE requests through the tool. These are the 4 main operations for REST APIs.
 4. The interface provides a text area for easily entering query parameters. Each line includes a key value pair separated by an equals sign. This interface may be upgraded in a future release.
 5. The text area for query parameters serves as the request body for POST, PUT, and DELETE requests.
-6. There is a separate place to enter the auth parameter and value for an API call. This would be a great place to enter the API key or an access token.
+6. There is a separate place to enter the auth parameter and value for an API call. This would be a great place to enter an API key or an access token.
 7. There is a button to send a request and a button to clear the values in all fields at once.
-8. The response area pretty prints the request’s response data and can be easily copy and pasted. The status code is also displayed. The code will be red if it represents an error occurring.
+8. The response area pretty prints the request’s response data and can be easily copy and pasted. The status code is also displayed. The code will be red if an error occurred.
 9. The divider between the request info and response areas can be moved to expand either area for better viewing.
 
 ## New Features and Issues
